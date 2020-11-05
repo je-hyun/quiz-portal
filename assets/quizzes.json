@@ -1,7 +1,9 @@
 {
     "quizzes": [
         {
-            "Mathematics": [
+            "id": 0,
+            "name": "Mathematics",
+            "questions": [
                 {
                     "question": "1 + 1 =",
                     "answers": [
@@ -32,8 +34,13 @@
                     ],
                     "correct_answer": 3
                 }
-            ],
-            "Easy": [
+            ]
+        },
+
+        {
+            "id": 1,
+            "name": "Easy",
+            "questions": [
                 {
                     "question": "What is the color of George Washington's white horse?",
                     "answers": [
