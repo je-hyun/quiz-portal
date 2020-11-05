@@ -36,3 +36,4 @@ Step by Step Process:
 Initialized the project using ng new quiz-portal.
 Push initial files onto github.
 Install bootstrap (npm install bootstrap , npm install jquery), add to build styles and scripts
+Create the JSON data and JSON-server (using `json-server ./assets/quizzes.json`).

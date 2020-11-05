@@ -1,0 +1,61 @@
+{
+    "quizzes": [
+        {
+            "Mathematics": [
+                {
+                    "question": "1 + 1 =",
+                    "answers": [
+                        "2",
+                        "100",
+                        "424",
+                        "Walnut"
+                    ],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "2 + 2 =",
+                    "answers": [
+                        "12313",
+                        "4",
+                        "424",
+                        "Walnut"
+                    ],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "19 + 0 =",
+                    "answers": [
+                        "Walnut",
+                        "100",
+                        "424",
+                        "19"
+                    ],
+                    "correct_answer": 3
+                }
+            ],
+            "Easy": [
+                {
+                    "question": "What is the color of George Washington's white horse?",
+                    "answers": [
+                        "2",
+                        "100",
+                        "White",
+                        "Walnut"
+                    ],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Pick the answer that says 'The correct answer'",
+                    "answers": [
+                        "The correct answer",
+                        "4",
+                        "424",
+                        "Walnut"
+                    ],
+                    "correct_answer": 0
+                }
+            ]
+        }
+        
+    ]
+}
