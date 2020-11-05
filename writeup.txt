@@ -27,3 +27,12 @@ Backlog
 - [ ] Create component for results
 
 ** Create/use a JSON api for quiz questions
+
+
+=======================================
+
+Step by Step Process:
+
+Initialized the project using ng new quiz-portal.
+Push initial files onto github.
+Install bootstrap (npm install bootstrap , npm install jquery), add to build styles and scripts
