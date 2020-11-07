@@ -1,0 +1,12 @@
+<label for="quizzes">Choose a quiz: </label>
+
+<select #select name="quizzes" id="quizzes" (change)="quizChange(select.value)">
+  <option value="">Select One</option>
+  <option value="0">Mathematics</option>
+  <option value="1">Easy</option>
+</select>
+
+<br/>
+<br/>
+
+<router-outlet></router-outlet>

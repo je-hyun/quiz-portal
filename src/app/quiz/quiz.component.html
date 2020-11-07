@@ -1,0 +1,44 @@
+<div *ngIf="started; else notStartedBlock">
+
+<h1>{{quizList[quizNumber].name}}</h1>
+
+
+<!-- <div class="card p-5 m-3" *ngFor="let question of quizList[quizNumber].questions; let i=index">
+    <h4>Q{{i+1}}</h4>
+    <p>{{question.question}}</p>
+    <ol>
+        
+        <li type="a" *ngFor="let answ of question.answers; let answerNumber=index">
+            <input type="radio" id="curQuestion" name="curQuestion" value="answerNumber">
+            <label for="curQuestion">&nbsp;{{answ}}</label><br>
+        </li>
+    </ol>
+</div> -->
+<div class="card p-5 m-3">
+    
+    <h4>{{curQuestionNumber + 1}} of {{curQuiz.questions.length}}</h4>
+    {{curQuestion.question}}
+    <ol type="a">
+        <li *ngFor="let answ of curQuestion.answers; let answerNumber=index">
+            <input [(ngModel)]="selectedAnswer" type="radio" id="curQuestion" name="curQuestion" value={{answerNumber}}>
+            <label for="curQuestion">&nbsp;{{answ}}</label><br>
+        </li>
+    </ol>
+
+    <div class="row m-1">
+        <div class="col-12 col-md-3"><button class="btn btn-secondary m-2" (click)="getNextQuestion()">Next Question</button></div>
+        <div class="col-12 col-md-3"><button class="btn btn-primary m-2">Submit Quiz</button></div>
+    </div>
+</div>
+
+
+
+
+</div>
+
+<ng-template #notStartedBlock>
+    <div class="card p-5 m-3" id="startQuizDisplay">
+        <p>Click below to start the quiz. <br/> Allow for sufficient time to finish the quiz before proceeding. <br/>Turn off all devices while taking the quiz. Good luck!</p><br/>
+        <button class="btn btn-lg btn-primary col-12 col-md-3" (click)="startQuiz();">Start quiz</button>
+    </div>
+</ng-template>

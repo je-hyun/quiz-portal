@@ -1,5 +1,5 @@
 # Important Note!
-To run the json-server, use `json-server ./assets/quizzes.json`
+To run the json-server, use `json-server ./src/assets/quizzes.json`
 
 # QuizPortal
 
