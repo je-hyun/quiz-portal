@@ -54,17 +54,29 @@ Backlog
 Step by Step Process:
 
 Initialized the project using ng new quiz-portal.
+
 Push initial files onto github.
+
 Install bootstrap (npm install bootstrap , npm install jquery), add to build styles and scripts
+
 Create the JSON data and JSON-server (using `json-server ./src/assets/quizzes.json`).
+
 Created main and quiz components using `ng g c <component_name>`
-Added common functionality to main component (navbar, dropdown)
-Added quiz functionality to quiz component
+
+Added common functionality to main component (navbar, dropdown).
+
+Added quiz functionality to quiz component.
+
 Created a model class for questions and quizzes (model.quiz.ts).
+
 The model class will be used in conjunction with the service.
-Created a service for quiz (quiz.service.ts), and implemented to call server
-Added all routes to app-routing.module.ts
+
+Created a service for quiz (quiz.service.ts), and implemented to call server.
+Added all routes to app-routing.module.ts.
+
 Created functionality to navigate quiz questions, grade quiz, and submit quiz.
-Created a results screen (for grades)
+
+Created a results screen (for grades).
+
 Created a welcome screen (instructions/etiquette to take quiz).
 
