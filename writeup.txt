@@ -1,33 +1,18 @@
 Project: Online Quiz
 
-
-Background of the problem statement:
-As the project is progressing, the management has asked you to create an online test application in order to help the recruitment team take online tests of the candidates coming for interviews.
-You must use the following:
-* 		Visual Studio Code
-* 		NodeJS
-* 		Angular
-* 		GitHub
-Following requirements should be met:
-* 		A few of the source codes should be tracked on GitHub repositories. You need to document the tracked files that are ignored during the final push to the GitHub repository.
-* 		The submission of your GitHub repository link is mandatory. In order to track your task, you need to share the link of the repository in the document.
-* 		The step-by-step process involved in completing this task should be documented.
-
-
 Rough Specifications
-- [ ] 1 Question Shown at a Time
-- [ ] Next button
-- [ ] Submit Button
-- [ ] Results (Scored based on questions)
-- [ ] (Option to choose between 2 Quizzes)
+- [x] 1 Question Shown at a Time
+- [x] Next button
+- [x] Submit Button
+- [x] Results (Scored based on questions)
+- [x] (Option to choose between 2 Quizzes)
 
 Backlog
-- [ ] Create API for questions/answers**
-- [ ] Create component for quiz question
-- [ ] Create component for results
+- [x] Create API for questions/answers**
+- [x] Create component for quiz question
+- [x] Create component for results
 
 ** Create/use a JSON api for quiz questions
-
 
 =======================================
 
@@ -37,3 +22,14 @@ Initialized the project using ng new quiz-portal.
 Push initial files onto github.
 Install bootstrap (npm install bootstrap , npm install jquery), add to build styles and scripts
 Create the JSON data and JSON-server (using `json-server ./src/assets/quizzes.json`).
+Created main and quiz components using `ng g c <component_name>`
+Added common functionality to main component (navbar, dropdown)
+Added quiz functionality to quiz component
+Created a model class for questions and quizzes (model.quiz.ts).
+The model class will be used in conjunction with the service.
+Created a service for quiz (quiz.service.ts), and implemented to call server
+Added all routes to app-routing.module.ts
+Created functionality to navigate quiz questions, grade quiz, and submit quiz.
+Created a results screen (for grades)
+Created a welcome screen (instructions/etiquette to take quiz).
+
