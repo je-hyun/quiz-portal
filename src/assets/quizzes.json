@@ -15,6 +15,14 @@
                     "correct_answer": 0
                 },
                 {
+                    "question": "True or False: 5 > 4?",
+                    "answers": [
+                        "True",
+                        "False"
+                    ],
+                    "correct_answer": 0
+                },
+                {
                     "question": "2 + 2 =",
                     "answers": [
                         "12313",
@@ -60,6 +68,45 @@
                         "Walnut"
                     ],
                     "correct_answer": 0
+                }
+            ]
+        },
+
+        {
+            "id": 2,
+            "name": "Tricks",
+            "questions": [
+                {
+                    "question": "You live in a one-story house made of redwood. What color are the stairs?",
+                    "answers": [
+                        "Red",
+                        "Brown",
+                        "White",
+                        "Green",
+                        "Thursday",
+                        "None of the Above"
+                    ],
+                    "correct_answer": 5
+                },
+                {
+                    "question": "What room do ghosts avoid?",
+                    "answers": [
+                        "The kitchen",
+                        "The bathroom",
+                        "The living room",
+                        "Walnut"
+                    ],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "You have 52 sheep. You sell half of them. You buy 200 more sheep. You sell all but 3 of them. How many sheep do you have left?",
+                    "answers": [
+                        "Walnut",
+                        "Three",
+                        "Two hundred twenty three",
+                        "None of the above"
+                    ],
+                    "correct_answer": 1
                 }
             ]
         }
