@@ -20,8 +20,8 @@ export class QuizComponent implements OnInit {
   gradeMessage:string;
   constructor(private quizService:QuizService, private route: ActivatedRoute) { }
 
-  ngOnInit(): void {
-    this.grade = 0;
+  initQuiz(): void {
+    this.gradeMessage="";
     this.graded = false;
     this.correctAnswers = 0;
     this.curQuestionNumber = -1;
@@ -29,6 +29,20 @@ export class QuizComponent implements OnInit {
     this.quizList = [new Quiz(-1, "N/A", [new Question("N/A", ["aa", "bb", "cc", "dd"], 0)])]
     this.route.params.subscribe((params: Params) => {this.quizNumber = params['quizNumber']});
     this.quizService.loadQuiz().subscribe(data=>{this.quizList=data},()=>{});
+
+  }
+  ngOnInit(): void {
+    this.subscribeRouteChange();
+    this.initQuiz();
+    // this.subscribeRouteChange();
+    // this.gradeMessage="";
+    // this.graded = false;
+    // this.correctAnswers = 0;
+    // this.curQuestionNumber = -1;
+    // this.started = false;
+    // this.quizList = [new Quiz(-1, "N/A", [new Question("N/A", ["aa", "bb", "cc", "dd"], 0)])]
+    // this.route.params.subscribe((params: Params) => {this.quizNumber = params['quizNumber']});
+    // this.quizService.loadQuiz().subscribe(data=>{this.quizList=data},()=>{});
   }
 
   getGrade() {
@@ -61,4 +75,11 @@ export class QuizComponent implements OnInit {
     this.curQuestionNumber=0;
     this.curQuestion = this.curQuiz.questions[this.curQuestionNumber];    
   }
+
+  subscribeRouteChange() {
+    this.route.params.subscribe((params = {}) => {
+        console.log("route changed");
+        this.initQuiz();
+    });
+}
 }

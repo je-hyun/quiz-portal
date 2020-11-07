@@ -17,6 +17,7 @@ export class MainComponent implements OnInit {
       this.router.navigate(['/welcome']);
     } else {
       this.router.navigate([`/quiz`, {"quizNumber":quizValue}]);
+      
     }
     
   }

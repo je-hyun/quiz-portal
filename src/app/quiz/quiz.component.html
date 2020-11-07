@@ -21,7 +21,12 @@
         </div>
 
 
-        <ng-template #gradedBlock>{{gradeMessage}}</ng-template>
+        <ng-template #gradedBlock>
+            <h4>You've finished the quiz!</h4>
+            <p>{{gradeMessage}}</p>
+            <br/>
+            <p>You may choose a different quiz from the dropdown above.</p>
+        </ng-template>
     </div>
 
 </div>
