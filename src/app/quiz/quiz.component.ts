@@ -17,9 +17,11 @@ export class QuizComponent implements OnInit {
   selectedAnswer:number;
   correctAnswers:number;
   graded:boolean;
+  gradeMessage:string;
   constructor(private quizService:QuizService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.grade = 0;
     this.graded = false;
     this.correctAnswers = 0;
     this.curQuestionNumber = -1;
@@ -31,7 +33,8 @@ export class QuizComponent implements OnInit {
 
   getGrade() {
     // Returns the grade, with two decimal points
-    return (this.correctAnswers / this.curQuiz.questions.length).toFixed(2);
+    this.gradeMessage = `Your grade is ${((this.correctAnswers / this.curQuiz.questions.length) * 100).toFixed(2)}%.`;
+    this.graded = true;
   }
 
   getNextQuestion() {
@@ -39,7 +42,7 @@ export class QuizComponent implements OnInit {
       this.correctAnswers += 1;
     }
     if (this.curQuestionNumber >= this.curQuiz.questions.length - 1) {
-      alert(`${this.getGrade()}%`);
+      this.getGrade();
       return
     }
     if(this.curQuestionNumber != -1) {
