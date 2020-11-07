@@ -1,12 +1,11 @@
-<label for="quizzes">Choose a quiz: </label>
 
+<nav class="navbar navbar-light bg-light">
+  <h5>Quiz Portal</h5>
+<label for="quizzes">Choose a Quiz</label>
 <select #select name="quizzes" id="quizzes" (change)="quizChange(select.value)">
-  <option value="">Select One</option>
-  <option value="0">Mathematics</option>
-  <option value="1">Easy</option>
+  <option value="">Select A Quiz</option>
+
+  <option *ngFor="let quiz of quizList; let i=index" [value]="i">{{quiz.name}}</option>
 </select>
-
-<br/>
-<br/>
-
+</nav>
 <router-outlet></router-outlet>

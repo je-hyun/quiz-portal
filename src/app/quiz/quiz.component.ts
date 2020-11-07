@@ -34,15 +34,6 @@ export class QuizComponent implements OnInit {
   ngOnInit(): void {
     this.subscribeRouteChange();
     this.initQuiz();
-    // this.subscribeRouteChange();
-    // this.gradeMessage="";
-    // this.graded = false;
-    // this.correctAnswers = 0;
-    // this.curQuestionNumber = -1;
-    // this.started = false;
-    // this.quizList = [new Quiz(-1, "N/A", [new Question("N/A", ["aa", "bb", "cc", "dd"], 0)])]
-    // this.route.params.subscribe((params: Params) => {this.quizNumber = params['quizNumber']});
-    // this.quizService.loadQuiz().subscribe(data=>{this.quizList=data},()=>{});
   }
 
   getGrade() {
@@ -51,19 +42,33 @@ export class QuizComponent implements OnInit {
     this.graded = true;
   }
 
+  submitQuiz() {
+    let confirmed = confirm("Are you sure you want to submit?")
+    if (confirmed) {
+      if (this.selectedAnswer == this.curQuestion.correct_answer) {
+        this.correctAnswers += 1;
+      }
+      this.getGrade();
+    }
+    
+  }
+
   getNextQuestion() {
+    if (this.curQuestionNumber >= this.curQuiz.questions.length - 1) {
+      this.submitQuiz();
+      return
+    }
     if (this.selectedAnswer == this.curQuestion.correct_answer) {
       this.correctAnswers += 1;
     }
-    if (this.curQuestionNumber >= this.curQuiz.questions.length - 1) {
-      this.getGrade();
-      return
-    }
+    
     if(this.curQuestionNumber != -1) {
       console.log(`${this.curQuestion.correct_answer} answered - ${this.selectedAnswer}`);
     }
     this.curQuestionNumber += 1;
     this.curQuestion = this.curQuiz.questions[this.curQuestionNumber];
+
+    this.selectedAnswer = null;
   }
   startQuiz() {
     // Hide the start button
